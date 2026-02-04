@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZiQin's Rapid Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div>
+        <!-- 把 ZiQin 改成你的名字 -->
+        <h1>ZiQin's Rapid Prototype</h1>
+        <p class="sub">Interactive To-Do + Stats (saved locally)</p>
+      </div>
+
+      <div class="stats" aria-label="stats">
+        <div class="stat">
+          <div class="label">Total</div>
+          <div class="value" id="totalCount">0</div>
+        </div>
+        <div class="stat">
+          <div class="label">Done</div>
+          <div class="value" id="doneCount">0</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <form id="todoForm" class="form">
+        <input id="todoInput" type="text" placeholder="输入一个待办，然后按 Enter 或点 Add" maxlength="80" required />
+        <button type="submit">Add</button>
+        <button type="button" id="clearDoneBtn" class="secondary">Clear Done</button>
+      </form>
+
+      <ul id="todoList" class="list" aria-label="todo list"></ul>
+      <p class="hint">提示：点击待办可切换完成状态；数据会保存在浏览器里。</p>
+    </section>
+
+    <footer class="footer">
+      <span>Deployed prototype • Spring 2026</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
